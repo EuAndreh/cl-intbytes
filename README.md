@@ -12,7 +12,7 @@ Inspired by [cl-mongo](https://github.com/fons/cl-mongo/blob/bb1f807a17c960dc81b
 ; => T
 ```
 
-For easy/ready encoding/decoding, use `int32->octets`/`octets->int32` and `int64->octets`/`octets->int64`. All accept and `&optional (start 0)` value:
+For easy/ready encoding/decoding, use `int32->octets`/`octets->int32` and `int64->octets`/`octets->int64`. All accept an `&optional (start 0)` value:
 ```lisp
 * (int32->octets 84215045)
 ; => #(5 5 5 5)

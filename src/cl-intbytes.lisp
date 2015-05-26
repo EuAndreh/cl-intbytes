@@ -7,12 +7,14 @@
   (:export int->octets
            int32->octets
            int64->octets
+           int->uint
            octets->int
            octets->int32
            octets->int64
            octets->uint
            octets->uint32
-           octets->uint64)
+           octets->uint64
+           uint->int)
   (:documentation "This package defines general-purpose functions to encode integers into octets-vectors of given sizes and functions decode them back. Also, it defines functions for common encoding formats (`INT32->OCTETS`, `INT64->OCTETS`) and functions for common decoding formats (`OCTETS->INT32`, `OCTETS->INT64`, `OCTETS->UINT32`, `OCTETS->UINT64`)."))
 (in-package cl-intbytes)
 
@@ -20,11 +22,9 @@
   "Converts a given `UINT` into a signed int based on the given `INT-SIZE`."
   (let ((sign-bit-position (1- int-size))
         (max-uint (expt 2 int-size)))
-    (cond ((and (< 0 uint)
-                 (logbitp (1- sign-bit-position) uint)
-                 (- uint max-uint)))
-         ((<= max-uint uint) 0)
-         (t uint))))
+    (if (logbitp sign-bit-position uint)
+        (- uint max-uint)
+        uint)))
 
 (defun octets->uint (array n-bytes &optional (start 0))
   "Interprets `N-BYTES` of a given `ARRAY` as an unsigned integer."

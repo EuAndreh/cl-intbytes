@@ -1,4 +1,5 @@
 (defsystem cl-intbytes-test
+  :name "cl-intbytes-test"
   :version "0.1.0"
   :author "André Miranda"
   :maintainer "André Miranda"

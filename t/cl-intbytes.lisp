@@ -45,10 +45,8 @@
     (is (octets->uint16 #(253 255))
         65533)
     (is (octets->int16 #(253 255))
-        -3
-        :test #'equalp)
+        -3)
     (is (octets->int16 #(0 253 255) 1)
-        -3
-        :test #'equalp)))
+        -3)))
 
 (run-test-all)

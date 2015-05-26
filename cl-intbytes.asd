@@ -7,8 +7,7 @@
   :bug-tracker "https://github.com/EuAndreh/cl-intbytes/issues"
   :source-control (:git "git@github.com:EuAndreh/cl-intbytes.git")
   :license "LLGPL"
-  :depends-on (cl-annot
-               fast-io)
+  :depends-on (fast-io)
   :components ((:module "src"
                         :components
                         ((:file "cl-intbytes")))

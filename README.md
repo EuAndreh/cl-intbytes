@@ -62,7 +62,7 @@ You can create your own functions with `int->octets` and `octets->int`:
 ```
 
 ## Dependencies
-This library depends on [cl-annot](https://github.com/m2ym/cl-annot) and [fast-io](https://github.com/rpav/fast-io).
+This library depends on [fast-io](https://github.com/rpav/fast-io).
 
 The test package uses the [prove](https://github.com/fukamachi/prove) test library.
 

@@ -13,8 +13,7 @@
            octets->int64
            octets->uint
            octets->uint32
-           octets->uint64
-           uint->int)
+           octets->uint64)
   (:documentation "This package defines general-purpose functions to encode integers into octets-vectors of given sizes and functions decode them back. Also, it defines functions for common encoding formats (`INT32->OCTETS`, `INT64->OCTETS`) and functions for common decoding formats (`OCTETS->INT32`, `OCTETS->INT64`, `OCTETS->UINT32`, `OCTETS->UINT64`)."))
 (in-package cl-intbytes)
 

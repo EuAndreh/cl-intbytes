@@ -18,7 +18,7 @@ For easy/ready encoding/decoding, use `int32->octets`/`octets->int32` and `int64
 ; => #(5 5 5 5)
 * (octets->int32 *)
 ; => 84215045
-* (octets->int32 #(0 5 5 5 5) 0)
+* (octets->int32 #(0 5 5 5 5) 1)
 ; => 84215045
 * (int64->octets 578437695752307201)
 ; => #(1 2 3 4 5 6 7 8)
@@ -56,6 +56,8 @@ You can create your own functions with `int->octets` and `octets->int`:
 * (octets->uint16 *)
 ; => 65533
 * (octets->int16 **)
+; => -3
+* (octets->int16 #(0 253 255) 1)
 ; => -3
 ```
 

@@ -62,6 +62,13 @@ You can create your own functions with `int->octets` and `octets->int`:
 ; => -3
 ```
 
+If you want to encode floats to bytes, use [`ieee-floats`](https://github.com/marijnh/ieee-floats):
+```lisp
+* (int64->octets (ieee-floats:encode-float64 1.5d0))
+; => #(0 0 0 0 0 0 248 63)
+* (ieee-floats:decode-float64 (octets->int64 *))
+; => 1.5d0
+```
 ## Dependencies
 This library depends on [fast-io](https://github.com/rpav/fast-io).
 

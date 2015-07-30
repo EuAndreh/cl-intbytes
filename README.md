@@ -1,4 +1,5 @@
 # cl-intbytes - Convert between any-base integers and byte arrays interchangeably
+[![Quicklisp](http://quickdocs.org/badge/cl-intbytes.svg)](http://quickdocs.org/cl-intbytes/)
 [![Build Status](https://travis-ci.org/EuAndreh/cl-intbytes.svg?branch=master)](https://travis-ci.org/EuAndreh/cl-intbytes)
 [![Circle CI](https://circleci.com/gh/EuAndreh/cl-intbytes.svg?style=svg)](https://circleci.com/gh/EuAndreh/cl-intbytes)
 [![Coverage Status](https://coveralls.io/repos/EuAndreh/cl-intbytes/badge.svg?branch=master)](https://coveralls.io/r/EuAndreh/cl-intbytes?branch=master)

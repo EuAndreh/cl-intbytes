@@ -1,4 +1,4 @@
-(defsystem cl-intbytes-test
+(asdf:defsystem cl-intbytes-test
   :name "cl-intbytes-test"
   :version "0.1.0"
   :author "André Miranda"
@@ -11,9 +11,7 @@
   :description "Test system for cl-intbytes."
   :depends-on (cl-intbytes
                prove)
-  :components ((:module "t"
-                        :components ((:test-file "cl-intbytes"))))
+  :components ((:test-file "t/cl-intbytes"))
   :defsystem-depends-on (:prove-asdf)
-  :perform (test-op :after (op c)
-                    (funcall (intern "RUN-TEST-SYSTEM" :prove-asdf) c)
-                    (asdf:clear-system c)))
+  :perform (test-op (op c)
+                    (symbol-call :prove-asdf :run-test-system c)))

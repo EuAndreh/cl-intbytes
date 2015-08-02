@@ -10,8 +10,7 @@
   :license "LLGPL"
   :description "Encode/decode any-base integers and byte arrays interchangeably."
   :depends-on (fast-io)
-  :components ((:module "src"
-                        :components ((:file "cl-intbytes")))
+  :components ((:file "src/cl-intbytes")
                (:static-file "README.md"))
   :long-description #.(uiop:read-file-string
                        (uiop:subpathname *load-truename* "README.md"))

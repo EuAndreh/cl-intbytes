@@ -75,6 +75,8 @@ This library depends on [fast-io](https://github.com/rpav/fast-io).
 
 The test package uses the [prove](https://github.com/fukamachi/prove) test library.
 
+cl-intbytes is used by [cl-BSON](https://github.com/EuAndreh/cl-BSON).
+
 ## Installation
 ```lisp
 (ql:quickload :cl-intbytes)
